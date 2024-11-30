@@ -6,10 +6,10 @@ module.exports = async (req, res) => {
 
     try {
         await client.connect();
-        const database = client.db("myDatabase"); // Replace with your database name
-        const collection = database.collection("users"); // Replace with your collection name
+        const database = client.db("myDatabase"); 
+        const collection = database.collection("users"); 
 
-        const email = req.query.email; // Get the email from query parameters
+        const email = req.query.email;
         const user = await collection.findOne({ email: email });
 
         if (user) {
