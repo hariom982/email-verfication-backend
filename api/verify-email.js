@@ -1,12 +1,12 @@
 const { MongoClient } = require("mongodb");
 
 module.exports = async (req, res) => {
-    const uri = "your_mongodb_connection_string"; // Replace with your MongoDB connection string
+    const uri = "mongodb+srv://hariom:salmankhan@cluster0.4khuw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; // Replace with your MongoDB connection string
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
     try {
         await client.connect();
-        const database = client.db("your_database_name"); // Replace with your database name
+        const database = client.db("myDatabase"); // Replace with your database name
         const collection = database.collection("users"); // Replace with your collection name
 
         const email = req.query.email; // Get the email from query parameters
