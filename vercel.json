@@ -1,9 +1,5 @@
+
 {
-    "version": 2,
-    "routes": [
-        {
-            "src": "/api/verify-email",
-            "dest": "/api/verify-email.js"
-        }
-    ]
-}
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ] }
