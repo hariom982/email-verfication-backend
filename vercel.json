@@ -1,9 +1,17 @@
  {
   "version": 2,
+  
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 60
+    }
+  },
   "routes": [
       {
           "src": "/api/verify-email",
           "dest": "/api/verify-email.js"
       }
   ]
+    
 }
+
